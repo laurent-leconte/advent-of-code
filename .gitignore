@@ -12,7 +12,7 @@ __pycache__
 *.cmxa
 
 # ocamlbuild working directory
-_build/
+**/_build/
 
 # ocamlbuild targets
 *.byte
@@ -23,4 +23,4 @@ setup.data
 setup.log
 
 # Merlin configuring file for Vim and Emacs
-.merlin
+**/.merlin

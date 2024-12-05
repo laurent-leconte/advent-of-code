@@ -16,7 +16,7 @@ let parse_instruction str =
   | "don't()" -> Dont
   | _ -> failwith "Invalid instruction"
 
-let extract_matches str =
+let parse_line str =
   let pattern = Str.regexp "\\(mul([0-9]++,[0-9]++)\\|do()\\|don't()\\)" in
   let rec aux pos acc =
     try
@@ -50,7 +50,7 @@ let eval_part2 instructions =
 let parse input = 
   input 
   |> Utils.read_lines 
-  |> List.map extract_matches
+  |> List.map parse_line
   |> List.concat
 
   let part1 input =

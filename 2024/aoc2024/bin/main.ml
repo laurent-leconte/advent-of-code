@@ -1,1 +1,1 @@
-let () = print_endline @@ Aoc2024.Day3.part2 "data/day3.dat"
+let () = print_endline @@ Aoc2024.Day4.part2 "data/day4.dat"

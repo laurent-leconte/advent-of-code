@@ -107,6 +107,15 @@ let read_char_matrix file =
     List.iteri write_line data;
     (ground, n, m)
 
+let pad matrix pad_char pad_size =
+    let (n, m) = dim matrix in
+    let new_n = n + 2 * pad_size in
+    let new_m = m + 2 * pad_size in
+    let new_matrix = Array.make_matrix new_n new_m pad_char in
+    let write_one i j d = new_matrix.(i + pad_size).(j + pad_size) <- d in
+    iterij write_one matrix;
+    new_matrix
+
 (** memoize a recursive function **)
 let memo_rec f =
   let h = Hashtbl.create 16 in

@@ -56,6 +56,10 @@ let fold f = function
   | [] | [_] -> failwith "Not enough items to fold list"
   | hd::tl -> List.fold_left f hd tl
 
+let head_opt = function
+    | [] -> None
+    | hd::_ -> Some hd
+
 (** matrix helper functions **)
 let dim m =
     (Array.length m, Array.length m.(0))

@@ -1,4 +1,4 @@
-from utils import get_input
+from utils import read_input
 import math
 
 example_ranges = "11-22,95-115,998-1012,1188511880-1188511890,222220-222224,1698522-1698528,446443-446449,38593856-38593862,565653-565659,824824821-824824827,2121212118-2121212124"
@@ -26,7 +26,7 @@ def invalid_ids(max_digits:int=10, part2=False) -> list[int]:
 
 
 def count_invalid_ids(part2=False) -> int:
-    range_str = get_input(2)[0]
+    range_str = read_input(2)[0]
     # range_str = example_ranges
     ranges = parse_ranges(range_str)
     doubles = invalid_ids(max_digits=10, part2=part2)

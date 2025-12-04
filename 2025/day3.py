@@ -1,4 +1,4 @@
-from utils import get_input
+from utils import read_input
 
 def split_input(s: str) -> list[int]:
     return [int(c) for c in s.strip()]  # Convert each character to an integer
@@ -57,5 +57,5 @@ def test_algo(input_lines: list[str]) -> None:
         assert res2 == res_pair, f"Mismatch for line {line}: {res2} != {res_pair}"
 
 if __name__ == "__main__":
-    print("Part 1:", solve(get_input(day=3), 2))
-    print("Part 2:", solve(get_input(day=3), 12))
+    print("Part 1:", solve(read_input(day=3), 2))
+    print("Part 2:", solve(read_input(day=3), 12))

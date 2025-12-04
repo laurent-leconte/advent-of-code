@@ -1,7 +1,7 @@
-from utils import get_input
+from utils import read_input
 
 def parse_input() -> list[tuple[str, int]]:
-    lines = get_input(1)
+    lines = read_input(1)
     combinations = []
     for line in lines:
         combinations.append((line[0], int(line[1:])))

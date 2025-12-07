@@ -71,7 +71,7 @@ def split_by_empty_line(input: list[str]) -> list[list[str]]:
     return res
 
 
-def transpose(lines: list[str]):
+def transpose(lines: list[str]) -> list[str]:
     rows = [''] * len(lines[0])
     for line in lines:
         for i, c in enumerate(line):
